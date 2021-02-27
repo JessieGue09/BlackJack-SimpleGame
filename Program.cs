@@ -98,6 +98,7 @@ namespace BlackJack_SimpleGame
             Tiradas(option, rancartas, cartasJugador);
 
             // TODO: Calcular el valor de las cartas que tiene el jugador (numérico) y mostrarlo cada vez que el jugador obtenga una carta. Considerar el valor del as como 11.
+            //Comentario pa ver en que rama estamos u3u.
             SumaCartas(rancartas, cartasJugador);
         }
     }
