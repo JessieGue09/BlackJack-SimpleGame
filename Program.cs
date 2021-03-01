@@ -17,15 +17,25 @@ namespace BlackJack_SimpleGame
         }
 
         /// <summary>
-        /// Le damos la bienvenida al jugador y mostramos que comienza con 0 cartas.
+        /// Le damos la bienvenida al jugador y generamos 2 cartas aleatorias del 1 al 11.
         /// </summary>
+        /// <returns>La suma de las dos cartas aleatorias.</returns>
         static int PrimerJuego()
         {
-            // El jugador comienza con 0 cartas; 
-            int cartasJugador = 0;
+            Random rnd1 = new Random();
+            // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
+            int carta1 = rnd1.Next(1, 12);
+
+            Random rnd2 = new Random();
+            // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
+            int carta2 = rnd2.Next(1, 12);
+
+            // El jugador comienza con 2 cartas random. 
+            int cartasJugador = carta1 + carta2;
 
             // Mostrar al jugar con cuantas cartas comienza
-            Console.WriteLine("¡Bienvenido!, has comenzado con: " + cartasJugador + " cartas.");
+            Console.WriteLine("¡Bienvenido!, has comenzado con 2 cartas: " + carta1 + " y " + carta2);
+            Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
 
 
             return cartasJugador;
@@ -74,18 +84,20 @@ namespace BlackJack_SimpleGame
                 // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
                 int rancartas2 = rnd.Next(1, 12);
                 int sum;
+                
+                // Mostrar la cartas generada aleatoriamente.
+                Console.WriteLine("Carta aleatoria: " + rancartas2);
 
                 // Si el número random = 11, pasa de 21 en la suma, se transforma en 1.
                 if (rancartas2 == 11 && cartasJugador > 10)
                 {
                     rancartas2 = 1;
                     // Verificar que el 11 se pasa a ser 1.
-                    Console.WriteLine("El 11 pasa a ser 1");
+                    Console.WriteLine("Adquiriste un AS, el 11 pasa a ser 1");
                 }
                 sum = cartasJugador + rancartas2;
                 cartasJugador = sum;
 
-                Console.WriteLine("Carta aleatoria: " + rancartas2);
                 Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
 
                 // El jugador pasa de 21, pierde automaticamente
@@ -171,6 +183,7 @@ namespace BlackJack_SimpleGame
         static void Main(string[] args)
         {
             // TODO: El jugador comienza con un manojo de cartas vacio
+            // TODO: (fix)Modificar la lógica de inicio de juego para entregar las primeras 2 cartas al jugador automáticamente sin que lo solicite.
             int cartasJugador = PrimerJuego();
 
             // TODO: Preguntar al jugar si desea quedarse con las cartas que tiene, o si solicita una carta.
@@ -178,6 +191,7 @@ namespace BlackJack_SimpleGame
             Console.WriteLine("Opción seleccionada: " + option);
 
             // Mostrar aleatoreamente una carta de la baraja.
+            // TODO: (fix)Modificar el valor del as; tomarlo con valor de 11 cuando sea posible hacerlo sin que el número total del jugador sobrepase el límite de 21, o en caso contrario tomarlo con valor de 1. (Linea 91).
             int rancartas = Cartas();
 
             // TODO: Si el jugador solicita una carta, generar aleatoriamente una carta de una baraja y agregarla a las cartas que tiene el jugador.
@@ -185,10 +199,9 @@ namespace BlackJack_SimpleGame
             // TODO: Cuando el jugador se detenga, generar aleatoriamente un número entre el 17 y el 26 (incluyendo ambos números). Este será el valor de "la casa" contra el cual debe competir el número obtenido por las cartas del jugador.
             Tiradas(option, rancartas, cartasJugador);
 
-            // TODO: Mostrar los números obtenidos por el jugador y por la casa. (Linea 105)
+            // TODO: Mostrar los números obtenidos por el jugador y por la casa. (Linea 107)
 
-            // TODO: Modificar el valor del as; tomarlo con valor de 11 cuando sea posible hacerlo sin que el número total del jugador sobrepase el límite de 21, o en caso contrario tomarlo con valor de 1. (Linea 78).
-
+            
         }
     }
 }
