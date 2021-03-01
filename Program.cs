@@ -65,6 +65,7 @@ namespace BlackJack_SimpleGame
             // 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
             int Acartas = rnd2.Next(16, 26);
 
+            //En caso de pedir más cartas:
             while (option == "Y")
             {
                 //Cartas aleatorias del jugador. (Se generan de nuevo dentro del ciclo).
@@ -98,6 +99,7 @@ namespace BlackJack_SimpleGame
                 }
 
             }
+            // En caso de detenerse:
             if (option == "N")
             {
                 // TODO: Mostrar los números obtenidos por el jugador y por la casa.
@@ -173,7 +175,7 @@ namespace BlackJack_SimpleGame
             // TODO: Cuando el jugador se detenga, generar aleatoriamente un número entre el 17 y el 26 (incluyendo ambos números). Este será el valor de "la casa" contra el cual debe competir el número obtenido por las cartas del jugador.
             Tiradas(option, rancartas, cartasJugador);
 
-            // TODO: Mostrar los números obtenidos por el jugador y por la casa.
+            // TODO: Mostrar los números obtenidos por el jugador y por la casa. (Linea 105)
 
 
         }
