@@ -65,12 +65,17 @@ namespace BlackJack_SimpleGame
                 int sum = cartasJugador + rancartas2;
                 cartasJugador = sum;
 
+
+                Console.WriteLine("Carta aleatoria: " + rancartas2);
+                Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
+
                 if (cartasJugador > 21)
                 {
                     Console.WriteLine("Pierdes");
-
-                    Console.WriteLine("Carta aleatoria: " + rancartas2);
-                    Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
+                    break;
+                }
+                else
+                {
                     Console.WriteLine("¿Deseas tomar una carta?");
                     Console.WriteLine("Y = Deseo una carta");
                     Console.WriteLine("N = No deseo una carta");
@@ -78,17 +83,16 @@ namespace BlackJack_SimpleGame
                     option = Convert.ToString(Console.ReadLine());
 
                 }
-                break;
 
             }
             if (option == "N")
             {
                 Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
             }
-            else
-            {
-                Console.WriteLine("Comando invalido");
-            }
+            //else
+            //{
+            //    Console.WriteLine("Comando invalido");
+            //}
         }
 
         /// <summary>
