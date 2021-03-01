@@ -52,6 +52,7 @@ namespace BlackJack_SimpleGame
         /// Creación de condicionales (if/else if) para determinar según la opción que eligió el jugar si se le la una carta o no.
         /// Creación de un ciclo para preguntar al usuario si desea otra carta, si es así; se genera un número aleatorio y se suma con el número de cartas del jugador.
         /// Se genera la variable random Acartas (17 - 26), el cúal será el número de la casa.
+        /// Creación de condicional if, para en caso de que en la parrida de un 11 y se pasa de 21 al momento de hacer la suma, se remplaza el 11 por un 1.
         /// Se implementa el metodo Ganador() para definir un ganador entre la casa y el jugador.
         /// </summary>
         /// <param name="option"> Opción que el jugador eligio, si solicita cartas (Y) o no (N)</param>
@@ -72,9 +73,17 @@ namespace BlackJack_SimpleGame
                 Random rnd = new Random();
                 // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
                 int rancartas2 = rnd.Next(1, 12);
-                int sum = cartasJugador + rancartas2;
-                cartasJugador = sum;
+                int sum;
 
+                // Si el número random = 11, pasa de 21 en la suma, se transforma en 1.
+                if (rancartas2 == 11 && cartasJugador > 10)
+                {
+                    rancartas2 = 1;
+                    // Verificar que el 11 se pasa a ser 1.
+                    Console.WriteLine("El 11 pasa a ser 1");
+                }
+                sum = cartasJugador + rancartas2;
+                cartasJugador = sum;
 
                 Console.WriteLine("Carta aleatoria: " + rancartas2);
                 Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
@@ -82,9 +91,10 @@ namespace BlackJack_SimpleGame
                 // El jugador pasa de 21, pierde automaticamente
                 if (cartasJugador > 21)
                 {
+                    
                     Console.WriteLine("El número de cartas que tiene la casa es: " + Acartas);
                     Ganar(Acartas, cartasJugador);
-                    
+
                     break; // Fin del ciclo.
                 }
                 else
@@ -177,6 +187,7 @@ namespace BlackJack_SimpleGame
 
             // TODO: Mostrar los números obtenidos por el jugador y por la casa. (Linea 105)
 
+            // TODO: Modificar el valor del as; tomarlo con valor de 11 cuando sea posible hacerlo sin que el número total del jugador sobrepase el límite de 21, o en caso contrario tomarlo con valor de 1. (Linea 78).
 
         }
     }
