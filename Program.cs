@@ -51,12 +51,18 @@ namespace BlackJack_SimpleGame
         /// <summary>
         /// Creación de condicionales (if/else if) para determinar según la opción que eligió el jugar si se le la una carta o no.
         /// Creación de un ciclo para preguntar al usuario si desea otra carta, si es así; se genera un número aleatorio y se suma con el número de cartas del jugador.
+        /// Se genera la variable random Acartas (17 - 26), el cúal será el número de la casa.
         /// </summary>
         /// <param name="option"> Opción que el jugador eligio, si solicita cartas (Y) o no (N)</param>
         /// <param name="rancartas">Manda a llamar la varible random para generar un número aleatorio<param>
         /// <param name="cartasJugador">Manda a llamar el número de cartas que tiene el jugador </param>
         static void Tiradas(string option, int rancartas, int cartasJugador)
         {
+            //Cartas aleatorias del AI
+                Random rnd2 = new Random();
+                // 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
+                int Acartas = rnd2.Next(16, 26);
+
             while (option == "Y")
             {
                 Random rnd = new Random();
@@ -72,6 +78,8 @@ namespace BlackJack_SimpleGame
                 if (cartasJugador > 21)
                 {
                     Console.WriteLine("Pierdes");
+                    Console.WriteLine("El número de cartas que tiene la casa es: " + Acartas);
+
                     break;
                 }
                 else
@@ -88,24 +96,9 @@ namespace BlackJack_SimpleGame
             if (option == "N")
             {
                 Console.WriteLine("Su número de cartas actual es: " + cartasJugador);
+
+                Console.WriteLine("El número de cartas que tiene la casa es: " + Acartas);
             }
-            //else
-            //{
-            //    Console.WriteLine("Comando invalido");
-            //}
-        }
-
-        /// <summary>
-        /// Se genera la variable suma, la cual, suma las cartas actuales del jugador con las que se les da y muestra cuantas tiene.
-        /// </summary>
-        /// <param name="rancartas">Cartas que la casa da al jugador (cartas random)</param>
-        /// <param name="cartasJugador">Numero de cartas que tiene actualmente el jugador</param>
-        static void SumaCartas(int rancartas, int cartasJugador)
-        {
-            int suma = cartasJugador + rancartas;
-
-            Console.WriteLine("El total de cartas obtenido es: " + suma);
-
         }
 
         static void Main(string[] args)
@@ -122,10 +115,9 @@ namespace BlackJack_SimpleGame
 
             // TODO: Si el jugador solicita una carta, generar aleatoriamente una carta de una baraja y agregarla a las cartas que tiene el jugador.
             // TODO: Calcular el valor de las cartas que tiene el jugador (numérico) y mostrarlo cada vez que el jugador obtenga una carta. Considerar el valor del as como 11.
+            // Cuando el jugador se detenga, generar aleatoriamente un número entre el 17 y el 26 (incluyendo ambos números). Este será el valor de "la casa" contra el cual debe competir el número obtenido por las cartas del jugador.
             Tiradas(option, rancartas, cartasJugador);
 
-
-            //SumaCartas(rancartas, cartasJugador);
         }
     }
 }
