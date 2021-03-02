@@ -6,16 +6,16 @@ _Código simple para el juego Black Jack (21), desde la consola._
 
 _Puntos (del 1 al 10) de la forma en la que esta desarrollado:_
 
-**1.** El jugador comienza con un conjunto de cartas vacío.
-**2.** Preguntar al jugador si desea quedarse con las cartas que tiene, o si solicita una carta.
-**3.** Si el jugador solicita una carta, generar aleatoriamente una carta de una baraja y agregarla a las cartas que tiene el jugador.
-**4.** Calcular el valor de las cartas que tiene el jugador (numérico) y mostrarlo cada vez que el jugador obtenga una carta. Considerar el valor del as como 11.
-**5.** Volver a preguntar al jugador lo mismo que en el paso (2), hasta que el jugador decida detenerse o hasta que se pase de 21.
-**6.** Cuando el jugador se detenga, generar aleatoriamente un número entre el 17 y el 26 (incluyendo ambos números). Este será el valor de "la casa" contra el cual debe competir el número obtenido por las cartas del jugador.
-**7.** Mostrar los números obtenidos por el jugador y por la casa.
-**8.** Comparar ambos números mostrados para determinar el ganador, y mostrar el resultado.
-**9.** Modificar el valor del as; tomarlo con valor de 11 cuando sea posible hacerlo sin que el número total del jugador sobrepase el límite de 21, o en caso contrario tomarlo con valor de 1.
-**10.** Modificar la lógica de inicio de juego para entregar la primer tarjeta al jugador automáticamente sin que lo solicite.
+* **1.** El jugador comienza con un conjunto de cartas vacío.
+* **2.** Preguntar al jugador si desea quedarse con las cartas que tiene, o si solicita una carta.
+* **3.** Si el jugador solicita una carta, generar aleatoriamente una carta de una baraja y agregarla a las cartas que tiene el jugador.
+* **4.** Calcular el valor de las cartas que tiene el jugador (numérico) y mostrarlo cada vez que el jugador obtenga una carta. Considerar el valor del as como 11.
+* **5.** Volver a preguntar al jugador lo mismo que en el paso (2), hasta que el jugador decida detenerse o hasta que se pase de 21.
+* **6.** Cuando el jugador se detenga, generar aleatoriamente un número entre el 17 y el 26 (incluyendo ambos números). Este será el valor de "la casa" contra el cual debe competir el número obtenido por las cartas del jugador.
+* **7.** Mostrar los números obtenidos por el jugador y por la casa.
+* **8.** Comparar ambos números mostrados para determinar el ganador, y mostrar el resultado.
+* **9.** Modificar el valor del as; tomarlo con valor de 11 cuando sea posible hacerlo sin que el número total del jugador sobrepase el límite de 21, o en caso contrario tomarlo con valor de 1.
+* **10.** Modificar la lógica de inicio de juego para entregar la primer tarjeta al jugador automáticamente sin que lo solicite.
 
 
 ### Forma de definir al ganador 
