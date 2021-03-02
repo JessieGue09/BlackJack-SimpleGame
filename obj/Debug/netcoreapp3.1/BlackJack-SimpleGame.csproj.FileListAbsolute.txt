@@ -1,0 +1,13 @@
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.exe
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.deps.json
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.runtimeconfig.json
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.runtimeconfig.dev.json
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.dll
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\bin\Debug\netcoreapp3.1\BlackJack-SimpleGame.pdb
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.csprojAssemblyReference.cache
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.AssemblyInfoInputs.cache
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.AssemblyInfo.cs
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.csproj.CoreCompileInputs.cache
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.dll
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.pdb
+C:\Users\jessi\3D Objects\teoria-de-la-computacion\BlackJack-SimpleGame\obj\Debug\netcoreapp3.1\BlackJack-SimpleGame.genruntimeconfig.cache
